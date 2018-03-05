@@ -1,0 +1,5 @@
+ci-info
+husky
+is-ci
+normalize-path
+strip-indent

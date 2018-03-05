@@ -1,0 +1,18 @@
+{
+  "name": "js-sdk",
+  "version": "1.0.0",
+  "description": "Javascript Software Development Kit",
+  "main": "index.js",
+  "repository": "git@github.com:bcowgill/js-sdk.git",
+  "author": "Brent S.A. Cowgill <zardoz@infoserve.net>",
+  "license": "UNLICENSE",
+  "scripts": {
+    "add": "yarn add",
+    "adddev": "yarn add --dev",
+    "postadd": "ls node_modules | sort > modules.lst",
+    "postadddev": "ls node_modules | sort > modules.lst"
+  },
+  "devDependencies": {
+    "husky": "^0.14.3"
+  }
+}
