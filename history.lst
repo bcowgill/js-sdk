@@ -1,0 +1,11 @@
+yarn init
+
+yarn add husky
+
+yarn run adddev eslint
+yarn run adddev eslint-plugin-import eslint-plugin-objects eslint-plugin-filenames
+yarn run adddev eslint-plugin-react eslint-plugin-jsx-a11y eslint-plugin-jest
+
+yarn run adddev lint-staged
+
+eslint --init

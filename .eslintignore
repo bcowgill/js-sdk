@@ -1,0 +1,8 @@
+/build/**
+/coverage/**
+/dist/**
+/node_modules/**
+/lib-cov/**
+/.nyc_output/**
+/bower_components/**
+
