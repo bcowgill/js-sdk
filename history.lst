@@ -9,3 +9,4 @@ yarn run adddev eslint-plugin-react eslint-plugin-jsx-a11y eslint-plugin-jest
 yarn run adddev lint-staged
 
 eslint --init
+yarn run adddev prettier

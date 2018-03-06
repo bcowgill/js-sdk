@@ -1,3 +1,5 @@
+# configure which files should be ignored by eslint
+# changes made here should probably be duplicated in .prettier-ignore
 /build/**
 /coverage/**
 /dist/**

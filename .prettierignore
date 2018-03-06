@@ -1,0 +1,10 @@
+# configure which files to ignore by the prettier
+# this file should be mainly identical to .eslintignore
+/build/**
+/coverage/**
+/dist/**
+/node_modules/**
+/lib-cov/**
+/.nyc_output/**
+/bower_components/**
+

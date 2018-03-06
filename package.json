@@ -1,35 +1,39 @@
 {
-  "name": "js-sdk",
-  "version": "1.0.0",
-  "description": "Javascript Software Development Kit",
-  "main": "index.js",
-  "repository": "git@github.com:bcowgill/js-sdk.git",
-  "author": "Brent S.A. Cowgill <zardoz@infoserve.net>",
-  "license": "UNLICENSE",
-  "scripts": {
-    "add": "yarn add",
-    "adddev": "yarn add --dev",
-    "postadd": "ls node_modules | sort > modules.lst",
-    "postadddev": "ls node_modules | sort > modules.lst",
-    "lint:single": "eslint --ignore-pattern '!.eslintrc.js' ",
-    "lint:root": "yarn lint:single .*.js *.js --fix",
-    "precommit": "yarn run lint-staged"
-  },
-  "lint-staged": {
-    "./*.js": [
-      "yarn run lint:root"
-    ]
-  },
-  "devDependencies": {
-    "eslint": "^4.18.2",
-    "eslint-plugin-filenames": "^1.2.0",
-    "eslint-plugin-import": "^2.9.0",
-    "eslint-plugin-jest": "^21.13.0",
-    "eslint-plugin-jsx-a11y": "^6.0.3",
-    "eslint-plugin-objects": "^1.1.1",
-    "eslint-plugin-react": "^7.7.0",
-    "husky": "^0.14.3",
-    "lint-staged": "^7.0.0"
-  },
-  "dependencies": {}
+	"name": "js-sdk",
+	"version": "1.0.0",
+	"description": "Javascript Software Development Kit",
+	"main": "index.js",
+	"repository": "git@github.com:bcowgill/js-sdk.git",
+	"author": "Brent S.A. Cowgill <zardoz@infoserve.net>",
+	"license": "UNLICENSE",
+	"scripts": {
+		"add": "yarn add",
+		"adddev": "yarn add --dev",
+		"postadd": "ls node_modules | sort > modules.lst",
+		"postadddev": "ls node_modules | sort > modules.lst",
+		"lint:single":
+			"eslint --ignore-pattern '!.eslintrc.js' --ignore-pattern '!.prettierrc.js'",
+		"lint:root": "yarn lint:single .*.js *.js --fix",
+		"lint": "yarn lint:root",
+		"prettier:single": "prettier --config .prettierrc.js --write ",
+		"prettier:root": "yarn prettier:single .*.js *.js package.json",
+		"prettier": "yarn run prettier:root",
+		"precommit": "yarn run lint-staged"
+	},
+	"lint-staged": {
+		"./*.js": ["yarn run prettier:root", "yarn run lint:root"]
+	},
+	"devDependencies": {
+		"eslint": "^4.18.2",
+		"eslint-plugin-filenames": "^1.2.0",
+		"eslint-plugin-import": "^2.9.0",
+		"eslint-plugin-jest": "^21.13.0",
+		"eslint-plugin-jsx-a11y": "^6.0.3",
+		"eslint-plugin-objects": "^1.1.1",
+		"eslint-plugin-react": "^7.7.0",
+		"husky": "^0.14.3",
+		"lint-staged": "^7.0.0",
+		"prettier": "^1.11.1"
+	},
+	"dependencies": {}
 }
