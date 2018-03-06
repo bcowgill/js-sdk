@@ -57,3 +57,4 @@ module.exports = {
 		'filenames/match-exported': [ 'error', [ null, 'kebab', 'camel' ] ]
 	}
 }
+

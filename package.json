@@ -13,7 +13,7 @@
     "postadddev": "ls node_modules | sort > modules.lst",
     "lint:single": "eslint --ignore-pattern '!.eslintrc.js' ",
     "lint:root": "yarn lint:single .*.js *.js --fix",
-    "precommit": "lint-staged"
+    "precommit": "yarn run lint-staged"
   },
   "lint-staged": {
     "./*.js": [
